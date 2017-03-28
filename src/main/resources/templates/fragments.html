@@ -31,7 +31,7 @@
 
         <table th:each="job : ${jobs}" class="job-listing">
             <tr th:each="item : ${job}">
-                <td th:text="${item.key}"></td>
+                <td th:text="${#strings.capitalizeWords(item.key)}"></td>
                 <td th:text="${item.value}"></td>
             </tr>
 

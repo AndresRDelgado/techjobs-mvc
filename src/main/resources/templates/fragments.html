@@ -28,6 +28,7 @@
     </div>
 
     <div th:fragment="list-results" th:if="${jobs} and ${jobs.size()}">
+        <h3 th:text="${jobs.size()}+' Job(s)'"></h3>
 
         <table th:each="job : ${jobs}" class="job-listing">
             <tr th:each="item : ${job}">
